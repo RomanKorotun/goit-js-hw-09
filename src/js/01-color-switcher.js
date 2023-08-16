@@ -9,9 +9,8 @@ function getRandomHexColor() {
 }
 
 btnStart.addEventListener('click', handlerStart);
-let id = null;
 function handlerStart(evt) {
-  id = setInterval(() => {
+  timerId = setInterval(() => {
     body.style.backgroundColor = getRandomHexColor();
   }, 1000);
   evt.target.disabled = true;
@@ -20,7 +19,7 @@ function handlerStart(evt) {
 
 btnStop.addEventListener('click', handlerStop);
 function handlerStop(evt) {
-  clearInterval(id);
+  clearInterval(timerId);
   evt.target.disabled = true;
   btnStart.disabled = false;
 }

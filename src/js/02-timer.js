@@ -23,7 +23,6 @@ const options = {
     if (selectedDates[0] <= options.defaultDate) {
       elements.btnEl.disabled = true;
       Notiflix.Notify.failure('Please choose a date in the future');
-      // alert('Please choose a date in the future');
       return;
     }
     if (selectedDates[0] > options.defaultDate) {
@@ -50,7 +49,7 @@ const options = {
           // Remaining seconds
           const seconds = Math.floor((((ms % day) % hour) % minute) / second);
 
-          elements.daysEl.textContent = days;
+          elements.daysEl.textContent = addLeadingZero(days);
           elements.hoursEl.textContent = addLeadingZero(hours);
           elements.minutesEl.textContent = addLeadingZero(minutes);
           elements.secondsEl.textContent = addLeadingZero(seconds);

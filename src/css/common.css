@@ -29,8 +29,9 @@ img {
 
 .value {
   text-align: center;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 32px;
+  height: 42px;
 }
 
 .label {

@@ -11,6 +11,8 @@ const elements = {
   secondsEl: document.querySelector('[data-seconds]'),
 };
 
+console.dir(elements.inputEl);
+
 elements.btnEl.disabled = true;
 
 const options = {
@@ -31,6 +33,7 @@ const options = {
 
     elements.btnEl.addEventListener('click', handlerClick);
     function handlerClick() {
+      elements.inputEl.disabled = true;
       elements.btnEl.disabled = true;
 
       function convertMs(ms) {

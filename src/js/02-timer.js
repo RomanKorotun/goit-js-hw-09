@@ -11,8 +11,6 @@ const elements = {
   secondsEl: document.querySelector('[data-seconds]'),
 };
 
-console.dir(elements.inputEl);
-
 elements.btnEl.disabled = true;
 
 const options = {
